@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="3" ignored="0" total="7" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="parallelGridTests" duration-ms="452863" started-at="2022-07-07T01:37:48Z" finished-at="2022-07-07T01:45:21Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:parallel.TestRunner@548a9f61]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Bank" duration-ms="452863" started-at="2022-07-07T01:37:48Z" finished-at="2022-07-07T01:45:21Z">
+      <class name="parallel.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:parallel.TestRunner@548a9f61]" name="setUpClass" is-config="true" duration-ms="682" started-at="2022-07-07T01:37:48Z" finished-at="2022-07-07T01:37:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:parallel.TestRunner@548a9f61]" name="runScenario" duration-ms="18292" started-at="2022-07-07T01:37:49Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-07T01:38:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that the user can navigate to the Payees page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Payee options]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NLPULTP283258', ip: '172.23.32.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 92.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210922161155, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 129, moz:profile: /tmp/rust_mozprofilepwtR6k, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.10.16.3-microsoft-standar..., proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 8922b138-9702-4e55-9f21-d36...}
+*** Element info: {Using=css selector, value=header[aria-label='Payees page. Attention access key one is available to close the Payees page.']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NLPULTP283258', ip: '172.23.32.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 92.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210922161155, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 129, moz:profile: /tmp/rust_mozprofilepwtR6k, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.10.16.3-microsoft-standar..., proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 8922b138-9702-4e55-9f21-d36...}
+*** Element info: {Using=css selector, value=header[aria-label='Payees page. Attention access key one is available to close the Payees page.']}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at parallel.Payee_StepDefinitions.payeesPageIsLoadedSuccessfully(Payee_StepDefinitions.java:70)
+at ✽.Payees page is loaded successfully(file:///C:/Automation%20Project/UI_Datacom/UIAutomation/src/test/java/parallel/Payee.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:parallel.TestRunner@548a9f61]" name="runScenario" duration-ms="37934" started-at="2022-07-07T01:37:49Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-07T01:38:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that a new payee can be added on the Payees page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Payee options]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:parallel.TestRunner@548a9f61]" name="runScenario" duration-ms="56132" started-at="2022-07-07T01:37:49Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-07T01:38:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that the payee name is a mandatory field"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Payee options]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:parallel.TestRunner@548a9f61]" name="runScenario" duration-ms="94135" started-at="2022-07-07T01:37:49Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-07T01:39:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that the payee names can be sorted by name"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Payee options]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:parallel.TestRunner@548a9f61]" name="runScenario" duration-ms="76535" started-at="2022-07-07T01:37:49Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-07T01:39:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Navigate and verify the payments page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify the payment functionality]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[Element <button class="button-1-1-31" type="button"> is not clickable at point (832,179) because another element <div class="overlay-1-1-54"> obscures it
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NLPULTP283258', ip: '172.23.32.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 92.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210922161155, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 869, moz:profile: /tmp/rust_mozprofile8MEhCL, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.10.16.3-microsoft-standar..., proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: ff05978c-6ac8-44cd-865b-0bf...}
+Session ID: ff05978c-6ac8-44cd-865b-0bfb6732a9f6]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: Element <button class="button-1-1-31" type="button"> is not clickable at point (832,179) because another element <div class="overlay-1-1-54"> obscures it
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NLPULTP283258', ip: '172.23.32.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 92.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210922161155, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 869, moz:profile: /tmp/rust_mozprofile8MEhCL, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.10.16.3-microsoft-standar..., proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: ff05978c-6ac8-44cd-865b-0bf...}
+Session ID: ff05978c-6ac8-44cd-865b-0bfb6732a9f6
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at parallel.Payments_StepDefinitions.userClicksOnTheFromEverydayAccountToBillsAccount(Payments_StepDefinitions.java:43)
+at ✽.User clicks on the from Everyday account to Bills account(file:///C:/Automation%20Project/UI_Datacom/UIAutomation/src/test/java/parallel/Payments.feature:7)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:parallel.TestRunner@548a9f61]" name="runScenario" duration-ms="449532" started-at="2022-07-07T01:37:49Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-07T01:45:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Navigate and verify the payments page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify the payment functionality]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:parallel.TestRunner@548a9f61]" name="runScenario" duration-ms="18284" started-at="2022-07-07T01:37:49Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-07T01:38:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Navigate and verify the payments page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify the payment functionality]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: //*[@id="left"]/div[1]/div/button
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NLPULTP283258', ip: '172.23.32.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 92.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210922161155, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 129, moz:profile: /tmp/rust_mozprofilepwtR6k, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.10.16.3-microsoft-standar..., proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 8922b138-9702-4e55-9f21-d36...}
+Session ID: 8922b138-9702-4e55-9f21-d36213ca169f
+*** Element info: {Using=xpath, value=//*[@id="left"]/div[1]/div/button}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id="left"]/div[1]/div/button
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NLPULTP283258', ip: '172.23.32.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 92.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210922161155, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 129, moz:profile: /tmp/rust_mozprofilepwtR6k, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.10.16.3-microsoft-standar..., proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 8922b138-9702-4e55-9f21-d36...}
+Session ID: 8922b138-9702-4e55-9f21-d36213ca169f
+*** Element info: {Using=xpath, value=//*[@id="left"]/div[1]/div/button}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at parallel.Payments_StepDefinitions.navigatestopaymentspage(Payments_StepDefinitions.java:30)
+at ✽.Navigates to the payments page(file:///C:/Automation%20Project/UI_Datacom/UIAutomation/src/test/java/parallel/Payments.feature:6)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:parallel.TestRunner@548a9f61]" name="tearDownClass" is-config="true" duration-ms="2620" started-at="2022-07-07T01:45:18Z" finished-at="2022-07-07T01:45:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- parallel.TestRunner -->
+    </test> <!-- Bank -->
+  </suite> <!-- parallelGridTests -->
+</testng-results>
