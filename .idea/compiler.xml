@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Datacom_UI_Docker" />
         <module name="UIAutomation" />
       </profile>
     </annotationProcessing>

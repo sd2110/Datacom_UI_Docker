@@ -5,7 +5,7 @@ public class payeePage {
     private String payeeButton_xpath = "//*[@id=\"left\"]/div[1]/div/div[3]/section/div[2]/nav[1]/ul/li[3]/a/span";
     private String addButtonMain_class = "js-add-payee";
     private String payeeHeader_css = "header[aria-label='Payees page. Attention access key one is available to close the Payees page.']";
-    private String searchPayee_css = "input[placeholder='Search payeesSearch payeesSearch payees']";
+    private String searchPayee_css = "input[placeholder='Search payees']";
     private String nameColumn_class = "js-payee-name-column";
     private String lastPaidColumn_class = "js-payee-last-paid-column";
     private String payeeName_id = "ComboboxInput-apm-name";

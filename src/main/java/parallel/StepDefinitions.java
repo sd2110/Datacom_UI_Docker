@@ -7,15 +7,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.payeePage;
+import pages.paymentsPage;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -24,9 +23,12 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class Payee_StepDefinitions {
-    public static RemoteWebDriver driver;
+public class StepDefinitions {
+    RemoteWebDriver driver;
     payeePage payeepage = new payeePage();
+    paymentsPage paymentspage = new paymentsPage();
+    private double everydayAccountBalance_beforeTransfer;
+    private double billsAccountBalance_beforeTransfer;
 
     @Given("User launches the demo application website {string} on {string}")
     public void userLaunchesTheDemoWebsite(String website, String browserName) throws MalformedURLException {
@@ -66,7 +68,8 @@ public class Payee_StepDefinitions {
 
     @Then("Payees page is loaded successfully")
     public void payeesPageIsLoadedSuccessfully() {
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        WebDriverWait wait = new WebDriverWait(driver, 60);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(payeepage.getSearchPayee_css())));
         if (driver.findElement(By.cssSelector(payeepage.getPayeeHeader_css())).isDisplayed() &&
                 driver.findElement(By.className(payeepage.getAddButtonMain_class())).isDisplayed() &&
                 driver.findElement(By.cssSelector(payeepage.getSearchPayee_css())).isDisplayed() &&
@@ -173,6 +176,66 @@ public class Payee_StepDefinitions {
         Collections.sort(sortedListDescending);
         Collections.reverse(sortedListDescending);
         Assert.assertTrue(sortedListDescending.equals(obtainedList));
+    }
+
+    @When("Navigates to the payments page")
+    public void navigatestopaymentspage() throws InterruptedException {
+
+        WebDriverWait wait = new WebDriverWait(driver,60);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(paymentspage.getEverydayAccountBalance_xpath())));
+        everydayAccountBalance_beforeTransfer = Double.parseDouble(driver.findElement(By.xpath(paymentspage.getEverydayAccountBalance_xpath())).getText().replaceAll(",",""));
+        billsAccountBalance_beforeTransfer = Double.parseDouble(driver.findElement(By.xpath(paymentspage.getBillsAccountBalance_xpath())).getText().replaceAll(",",""));
+        driver.findElement(By.xpath(payeepage.getMenuButton_xpath())).click();
+        Thread.sleep(1000);
+        driver.findElement(By.className(paymentspage.getPayOrTransferButton_class())).click();
+        Thread.sleep(2000);
+    }
+
+    @And("User clicks on the from Everyday account to Bills account")
+    public void userClicksOnTheFromEverydayAccountToBillsAccount() throws InterruptedException {
+        driver.findElement(By.cssSelector(paymentspage.getFromAccount_css())).click();
+        Thread.sleep(2000);
+        driver.findElement(By.cssSelector("input[placeholder='Search']")).sendKeys("Everyday");
+        Thread.sleep(1000);
+        driver.findElement(By.className("name-1-1-65")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.cssSelector(paymentspage.getToAccount_css())).click();
+        Thread.sleep(1000);
+        driver.findElement(By.cssSelector("input[placeholder='Search']")).sendKeys("Bills");
+        Thread.sleep(2000);
+        driver.findElement(By.cssSelector("button[data-monitoring-label='Transfer Form Account Card']")).click();
+    }
+
+    @And("Transfer amount {string}")
+    public void transferAmount(String amount) throws InterruptedException {
+        Thread.sleep(500);
+        driver.findElement(By.id(paymentspage.getAmountTextBox_id())).sendKeys(amount);
+    }
+
+    @And("Clicks on the Pay or Transfer button")
+    public void clicksOnThePayOrTransferButton() throws InterruptedException {
+        Thread.sleep(1000);
+        driver.findElement(By.cssSelector(paymentspage.getTransferButton_css())).click();
+    }
+
+    @Then("Payment is successful")
+    public void paymentIsSuccessful() {
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(paymentspage.getPaymentSuccessfulMessage_class())));
+        System.out.println("Payment was done successfully");
+    }
+
+    @And("Everyday account balance reduces by {string}")
+    public void everydayAccountBalanceReducesBy(String amount) {
+        double everydayAccountBalance_afterTransfer = Double.parseDouble(driver.findElement(By.xpath(paymentspage.getEverydayAccountBalance_xpath())).getText().replaceAll(",",""));
+        Assert.assertTrue("Everyday account balance was reduced successfully",everydayAccountBalance_afterTransfer==everydayAccountBalance_beforeTransfer-Double.parseDouble(amount));
+    }
+
+    @And("Bill account balance increases by {string}")
+    public void billAccountBalanceIncreasesBy(String amount) {
+        double billsAccountBalance_afterTransfer = Double.parseDouble(driver.findElement(By.xpath(paymentspage.getBillsAccountBalance_xpath())).getText().replaceAll(",",""));
+        Assert.assertTrue("Bills account balance was increased successfully", billsAccountBalance_afterTransfer==billsAccountBalance_beforeTransfer+Double.parseDouble(amount));
+
     }
 
     //Closing the browser

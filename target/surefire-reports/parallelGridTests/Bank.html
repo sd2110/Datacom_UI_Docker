@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Bank</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 07 03:37:48 CAT 2022</td>
+<td>Started on:</td><td>Thu Jul 07 12:31:51 CAT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>452 seconds (452863 ms)</td>
+<tr><td>Total time:</td><td>175 seconds (175464 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,146 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='parallel.TestRunner.runScenario()'><b>runScenario</b><br>Test class: parallel.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigate and verify the payments page", "Optional[Verify the payment functionality]"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id=&quot;left&quot;]/div[1]/div/button
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;NLPULTP283258&apos;, ip: &apos;172.23.32.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 92.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210922161155, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 129, moz:profile: /tmp/rust_mozprofilepwtR6k, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.10.16.3-microsoft-standar..., proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 8922b138-9702-4e55-9f21-d36...}
-Session ID: 8922b138-9702-4e55-9f21-d36213ca169f
-*** Element info: {Using=xpath, value=//*[@id=&quot;left&quot;]/div[1]/div/button}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at parallel.Payments_StepDefinitions.navigatestopaymentspage(Payments_StepDefinitions.java:30)
-	at ?.Navigates to the payments page(file:///C:/Automation%20Project/UI_Datacom/UIAutomation/src/test/java/parallel/Payments.feature:6)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace596324359", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace596324359'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id=&quot;left&quot;]/div[1]/div/button
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;NLPULTP283258&apos;, ip: &apos;172.23.32.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 92.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210922161155, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 129, moz:profile: /tmp/rust_mozprofilepwtR6k, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.10.16.3-microsoft-standar..., proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 8922b138-9702-4e55-9f21-d36...}
-Session ID: 8922b138-9702-4e55-9f21-d36213ca169f
-*** Element info: {Using=xpath, value=//*[@id=&quot;left&quot;]/div[1]/div/button}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at parallel.Payments_StepDefinitions.navigatestopaymentspage(Payments_StepDefinitions.java:30)
-	at ?.Navigates to the payments page(file:///C:/Automation%20Project/UI_Datacom/UIAutomation/src/test/java/parallel/Payments.feature:6)
-</pre></div></td>
-<td>18</td>
-<td>parallel.TestRunner@548a9f61</td></tr>
-<tr>
-<td title='parallel.TestRunner.runScenario()'><b>runScenario</b><br>Test class: parallel.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that the user can navigate to the Payees page", "Optional[Verify Payee options]"</td>
-<td><div><pre>org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;NLPULTP283258&apos;, ip: &apos;172.23.32.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 92.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210922161155, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 129, moz:profile: /tmp/rust_mozprofilepwtR6k, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.10.16.3-microsoft-standar..., proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 8922b138-9702-4e55-9f21-d36...}
-*** Element info: {Using=css selector, value=header[aria-label=&apos;Payees page. Attention access key one is available to close the Payees page.&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at parallel.Payee_StepDefinitions.payeesPageIsLoadedSuccessfully(Payee_StepDefinitions.java:70)
-	at ?.Payees page is loaded successfully(file:///C:/Automation%20Project/UI_Datacom/UIAutomation/src/test/java/parallel/Payee.feature:8)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1176011826", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1176011826'><pre>org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;NLPULTP283258&apos;, ip: &apos;172.23.32.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 92.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210922161155, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 129, moz:profile: /tmp/rust_mozprofilepwtR6k, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.10.16.3-microsoft-standar..., proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 8922b138-9702-4e55-9f21-d36...}
-*** Element info: {Using=css selector, value=header[aria-label=&apos;Payees page. Attention access key one is available to close the Payees page.&apos;]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at parallel.Payee_StepDefinitions.payeesPageIsLoadedSuccessfully(Payee_StepDefinitions.java:70)
-	at ?.Payees page is loaded successfully(file:///C:/Automation%20Project/UI_Datacom/UIAutomation/src/test/java/parallel/Payee.feature:8)
-</pre></div></td>
-<td>18</td>
-<td>parallel.TestRunner@548a9f61</td></tr>
-<tr>
-<td title='parallel.TestRunner.runScenario()'><b>runScenario</b><br>Test class: parallel.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigate and verify the payments page", "Optional[Verify the payment functionality]"</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: Element &lt;button class=&quot;button-1-1-31&quot; type=&quot;button&quot;&gt; is not clickable at point (832,179) because another element &lt;div class=&quot;overlay-1-1-54&quot;&gt; obscures it
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;NLPULTP283258&apos;, ip: &apos;172.23.32.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 92.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210922161155, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 869, moz:profile: /tmp/rust_mozprofile8MEhCL, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.10.16.3-microsoft-standar..., proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: ff05978c-6ac8-44cd-865b-0bf...}
-Session ID: ff05978c-6ac8-44cd-865b-0bfb6732a9f6
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at parallel.Payments_StepDefinitions.userClicksOnTheFromEverydayAccountToBillsAccount(Payments_StepDefinitions.java:43)
-	at ?.User clicks on the from Everyday account to Bills account(file:///C:/Automation%20Project/UI_Datacom/UIAutomation/src/test/java/parallel/Payments.feature:7)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace500522382", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace500522382'><pre>org.openqa.selenium.ElementClickInterceptedException: Element &lt;button class=&quot;button-1-1-31&quot; type=&quot;button&quot;&gt; is not clickable at point (832,179) because another element &lt;div class=&quot;overlay-1-1-54&quot;&gt; obscures it
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;NLPULTP283258&apos;, ip: &apos;172.23.32.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 92.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210922161155, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 869, moz:profile: /tmp/rust_mozprofile8MEhCL, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.10.16.3-microsoft-standar..., proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: ff05978c-6ac8-44cd-865b-0bf...}
-Session ID: ff05978c-6ac8-44cd-865b-0bfb6732a9f6
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at parallel.Payments_StepDefinitions.userClicksOnTheFromEverydayAccountToBillsAccount(Payments_StepDefinitions.java:43)
-	at ?.User clicks on the from Everyday account to Bills account(file:///C:/Automation%20Project/UI_Datacom/UIAutomation/src/test/java/parallel/Payments.feature:7)
-</pre></div></td>
-<td>76</td>
-<td>parallel.TestRunner@548a9f61</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -215,24 +75,39 @@ Session ID: ff05978c-6ac8-44cd-865b-0bfb6732a9f6
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='parallel.TestRunner.runScenario()'><b>runScenario</b><br>Test class: parallel.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that a new payee can be added on the Payees page", "Optional[Verify Payee options]"</td>
+<td title='parallel.TestRunner.runScenario()'><b>runScenario</b><br>Test class: parallel.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that the user can navigate to the Payees page", "Optional[Verify Payee options]"</td>
 <td></td>
-<td>37</td>
-<td>parallel.TestRunner@548a9f61</td></tr>
-<tr>
-<td title='parallel.TestRunner.runScenario()'><b>runScenario</b><br>Test class: parallel.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that the payee name is a mandatory field", "Optional[Verify Payee options]"</td>
-<td></td>
-<td>56</td>
-<td>parallel.TestRunner@548a9f61</td></tr>
-<tr>
-<td title='parallel.TestRunner.runScenario()'><b>runScenario</b><br>Test class: parallel.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that the payee names can be sorted by name", "Optional[Verify Payee options]"</td>
-<td></td>
-<td>94</td>
+<td>41</td>
 <td>parallel.TestRunner@548a9f61</td></tr>
 <tr>
 <td title='parallel.TestRunner.runScenario()'><b>runScenario</b><br>Test class: parallel.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigate and verify the payments page", "Optional[Verify the payment functionality]"</td>
 <td></td>
-<td>449</td>
+<td>60</td>
+<td>parallel.TestRunner@548a9f61</td></tr>
+<tr>
+<td title='parallel.TestRunner.runScenario()'><b>runScenario</b><br>Test class: parallel.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigate and verify the payments page", "Optional[Verify the payment functionality]"</td>
+<td></td>
+<td>75</td>
+<td>parallel.TestRunner@548a9f61</td></tr>
+<tr>
+<td title='parallel.TestRunner.runScenario()'><b>runScenario</b><br>Test class: parallel.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that the payee name is a mandatory field", "Optional[Verify Payee options]"</td>
+<td></td>
+<td>86</td>
+<td>parallel.TestRunner@548a9f61</td></tr>
+<tr>
+<td title='parallel.TestRunner.runScenario()'><b>runScenario</b><br>Test class: parallel.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigate and verify the payments page", "Optional[Verify the payment functionality]"</td>
+<td></td>
+<td>123</td>
+<td>parallel.TestRunner@548a9f61</td></tr>
+<tr>
+<td title='parallel.TestRunner.runScenario()'><b>runScenario</b><br>Test class: parallel.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that a new payee can be added on the Payees page", "Optional[Verify Payee options]"</td>
+<td></td>
+<td>148</td>
+<td>parallel.TestRunner@548a9f61</td></tr>
+<tr>
+<td title='parallel.TestRunner.runScenario()'><b>runScenario</b><br>Test class: parallel.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that the payee names can be sorted by name", "Optional[Verify Payee options]"</td>
+<td></td>
+<td>171</td>
 <td>parallel.TestRunner@548a9f61</td></tr>
 </table><p>
 </body>
